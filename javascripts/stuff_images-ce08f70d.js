@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".more a").click(function(e){e.preventDefault();var t=this.getAttribute("data-target"),n=this.href;$("li"+t+" img").fadeOut(80,function(){$("li"+t+" img").attr("src",n)}).fadeIn(80)})});

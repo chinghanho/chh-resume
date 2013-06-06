@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".message").html();$(".avatar").click(function(){return $(".message").html("Don't Poke Me! >///<<br>Hire Me!"),setTimeout(function(){$(".message").html(e)},4e3),$(".avatar-container").addClass("ani-state"),setTimeout(function(){$(".avatar-container").removeClass("ani-state")},4e3),!1})});
