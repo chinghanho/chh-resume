@@ -1,0 +1,29 @@
+$noise-bg: image-url("noise.png");
+
+// Main Link Colors
+$link-color: hsla(120, 1%, 58%, 1);
+$link-color-hover: darken($link-color, 16%);
+
+// Main Section Colors
+$text-color: hsla(120, 1%, 18%, 1);
+$text-color-light: lighten($text-color, 38%);
+
+$page-bg: hsla(0, 0%, 96%, 1);
+$box-bg: hsla(0, 0%, 90%, 1);
+
+a {
+  @include transition(color .3s);
+  @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color, $active: $link-color);
+  text-decoration: none;
+}
+
+body {
+  background: $page-bg image-url("paper_fibers/paper_fibers.png") top left;
+  color: $text-color;
+
+  .top-bar {
+    @include box-shadow(hsla(0, 0%, 78%, 1) 0 1px 3px);
+    background: hsla(0, 0%, 72%, 1) image-url("envelope-stripes.png") top center;
+    height: 3px;
+  }
+}

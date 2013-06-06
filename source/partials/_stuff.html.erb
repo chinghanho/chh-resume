@@ -1,0 +1,59 @@
+<% stuff = {
+  "Use Sublime Text" => {
+    "id"          => "use-sublime-text",
+    "url"         => "http://use.sublimetext.tw",
+    "images"      => [ "use-sublimetext-tw-1.png", "use-sublimetext-tw-2.png", "use-sublimetext-tw-3.png" ],
+    "description" => "專門分享 Sublime Text 編輯器使用技巧的網誌，佈景主題模擬 Sublime Text 本身的外觀。",
+    "participate" => "html, css, ruby, content, design"
+  },
+  "Sublime Text 手冊" => {
+    "id"          => "docs-sublime-text",
+    "url"         => "http://docs.sublimetext.tw",
+    "images"      => [ "docs-sublimetext-tw-1.png", "docs-sublimetext-tw-2.png", "docs-sublimetext-tw-3.png" ],
+    "description" => "2013 年最熱門的程式編輯器 Sublime Text 的中文手冊。",
+    "participate" => "html, css, ruby, content, design"
+  },
+  "Dropbot Theme" => {
+    "id"          => "dropbot-theme",
+    "url"         => "http://blog.chh.tw",
+    "images" => [ "blog-chh-tw-1.png", "blog-chh-tw-2.png", "blog-chh-tw-3.png" ],
+    "description" => "一套 Octopress 的佈景主題，更適合中文排版，以及更專注於內容。",
+    "participate" => "html, css, design"
+  }
+} %>
+
+<section class="row" id="stuff">
+  <div class="inner">
+    <div class="column4">
+      <h2 class="row-title">Stuff I Made</h2>
+    </div>
+
+    <div class="column16 last">
+      <ul>
+        <% stuff.each do |k, v| %>
+          <li id="<%= v["id"] %>">
+            <% link_to v["url"], :class => "column10", :target => "_blank" do %>
+              <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img" %>
+            <% end %>
+
+            <div class="column6 last stuff_info">
+              <h3 class="stuff-title"><%= k %></h3>
+              <% link_to v["url"], :class => "go", :target => "_blank" do %>
+                <i class="fa-icon-external-link-sign"></i>
+              <% end %>
+              <div class="description">
+                <div class="participate"><%= v["participate"] %></div>
+                <p><%= v["description"] %></p>
+              </div>
+              <div class="more">
+                <% v["images"].each do |img| %>
+                  <a data-target="#<%= v["id"] %>" href="/images/<%= img %>"><i class="fa-icon-desktop"></i></a>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

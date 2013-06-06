@@ -1,0 +1,19 @@
+$footer-color: hsla(120, 1%, 69%, 1);
+
+#footer {
+  height: 60px;
+  margin: -60px 0 0;
+  p {
+    color: $footer-color;
+    text-align: center;
+    font-size: 14px;
+    a {
+      @include transition(color .3s);
+      color: $footer-color;
+      &:hover {
+        @include transition(color .3s);
+        color: $link-color;
+      }
+    }
+  }
+}

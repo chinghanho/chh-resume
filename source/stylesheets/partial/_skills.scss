@@ -1,0 +1,37 @@
+$html5-color: hsla(12, 77%, 52%, 1);
+$css3-color: hsla(200, 80%, 52%, 1);
+$ruby-color: hsla(359, 67%, 48%, 1);
+$git-color: hsla(6, 87%, 62%, 1);
+
+#skills {
+  @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
+  border-bottom: 1px solid hsla(0, 0%, 84%, 1);
+
+  [class^="icon-"], [class*=" icon-"] {
+    @include transition(all .3s);
+    font-size: 112px;
+  }
+
+  li {
+    float: left;
+    text-align: center;
+    padding: 15px 0 0;
+    margin-bottom: $blueprint-grid-margin;
+
+    .icon-html5-02        { color: $html5-color; }
+    .icon-css3-02         { color: $css3-color;  }
+    .icon-prog-ruby       { color: $ruby-color;  }
+    .icon-vc-git          { color: $git-color;   }
+
+    .icon-html5-02:hover  { color: darken($html5-color, 4%); }
+    .icon-css3-02:hover   { color: darken($css3-color, 4%);  }
+    .icon-prog-ruby:hover { color: darken($ruby-color, 4%);  }
+    .icon-vc-git:hover    { color: darken($git-color, 4%);   }
+
+    .ref {
+      color: $text-color-light;
+      margin: 15px;
+      font-size: 12px;
+    }
+  }
+}

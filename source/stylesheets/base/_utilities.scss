@@ -1,0 +1,16 @@
+@mixin content-text-shadow {
+  @include text-shadow(hsla(0, 0%, 100%, 1) 1px 1px);
+}
+
+@include keyframes(fadein) {
+  0% {
+    @include opacity(.0);
+    @include scale(0.9);
+    @include transform3d(0 -40 0);
+  }
+  100% {
+    @include opacity(1.0);
+    @include scale(1);
+    @include transform3d(0 0 0);
+  }
+}

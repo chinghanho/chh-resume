@@ -1,0 +1,62 @@
+$blueprint_grid_columns: 20;
+$blueprint_grid_width: 40px;
+$blueprint-grid-margin: 10px;
+
+@import "blueprint/grid";
+
+.main {
+  .inner {
+    @include container;
+  }
+
+  @for $i from 1 through $blueprint_grid_columns {
+    .column#{$i} { @include column($i); }
+  }
+
+  @for $i from 1 through $blueprint_grid_columns {
+    .prepend#{$i} { @include prepend($i); }
+  }
+
+  @for $i from 1 through $blueprint_grid_columns {
+    .append#{$i} { @include append($i); }
+  }
+
+  .last {
+    @include last;
+  }
+
+  .row {
+    padding: 35px 0;
+  }
+}
+
+#header-container {
+  padding: 8px 0 29px;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.extra {
+  position: absolute;
+}
+
+.box {
+  background: $box-bg $noise-bg top left;
+  @include box-shadow(hsla(0, 0%, 76%, 1) 0 1px 5px inset, hsla(0, 0%, 98%, 1) 0 1px 2px);
+  @include border-radius(3px);
+}
+
+#back_to_top {
+  background: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  @include box-shadow(hsla(0, 0%, 27%, .7) 1px 1px 5px);
+  @include border-radius(3px);
+}

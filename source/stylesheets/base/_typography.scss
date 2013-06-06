@@ -1,0 +1,51 @@
+@import "pictonic";
+@import "font-awesome";
+
+$sans: "Open Sans", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+$serif: Georgia, serif;
+
+$heading-font-family: "Palatino", serif !default;
+$heading-title-font-family: $heading-font-family !default;
+$heading-subtitle-font-family: $heading-font-family !default;
+$row-heading-title-font-family: "Hoefler Text", serif;
+
+.heading {
+  font-family: $heading-font-family;
+}
+
+.sans  { font-family: $sans; }
+.serif { font-family: $serif; }
+
+#{headings()} {
+  @extend .heading;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  @extend .sans;
+  line-height: 1.7em;
+  @include content-text-shadow;
+
+  header h1 {
+    font-family: $heading-title-font-family;
+    font-size: 55px;
+    line-height: 1.8em;
+  }
+  header h2 {
+    font-family: $heading-subtitle-font-family;
+    font-size: 38px;
+  }
+}
+
+.row-title {
+  font: 28px/1.6em $row-heading-title-font-family;
+}
+
+.stuff-title {
+  font: 18px/1.6em $serif;
+}
+
+.icon-twitter-3    { color: hsla(199, 80%, 56%, 1); }
+.icon-github-01    { color: hsla(260, 2%, 35%, 1);  }
+.icon-facebook     { color: hsla(221, 43%, 42%, 1); }
+.icon-google__x2B_ { color: hsla(10, 68%, 53%, 1);  }

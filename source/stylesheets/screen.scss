@@ -1,0 +1,7 @@
+@import "compass";
+@import "animation"; // from compass-animation: http://git.io/146Q5g
+@include global-reset;
+@include reset-html5;
+
+@import "base";
+@import "partial";

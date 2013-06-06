@@ -1,0 +1,17 @@
+#availability {
+  @include box-shadow(0 0 155px hsla(0, 0%, 0%, .4) inset);
+  background: url("/images/subtlenet2/subtlenet2.png") hsla(0, 0%, 88%, 1) repeat;
+
+  padding: 90px 0 120px;
+  .content-entry {
+    text-align: center;
+    font-family: 'Patua One', 'Helvetica Neue', Arial, sans-serif;
+    color: hsla(0, 0%, 93%, 1);
+    @include text-shadow(hsla(0, 0%, 22%, .7) 1px 1px 2px, hsla(0, 0%, 100%, 1) 0 -2px);
+    font-size: 39px;
+    line-height: 1.2em;
+    em {
+      font-size: 69px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+$go-link-color: hsla(200, 95%, 64%, 1);
+$go-link-color-hover: darken($go-link-color, 16%);
+
+#stuff {
+  @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
+  border-bottom: 1px solid hsla(0, 0%, 88%, 1);
+
+  img {
+    @include box-sizing(border-box);
+    width: 490px;
+    height: 380px;
+    display: inline-block;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h3 {
+    display: inline;
+  }
+
+  .go {
+    margin-left: 5px;
+    color: $go-link-color;
+    &:hover {
+      color: $go-link-color-hover;
+    }
+  }
+
+  .stuff_info {
+    @include box-sizing(border-box);
+    padding: 0 0 0 15px;
+  }
+
+  .description {
+    p {
+      color: $text-color-light;
+      margin: 0 0 15px 0;
+    }
+
+    .participate {
+      color: $text-color-light;
+      margin: 0 0 20px;
+    }
+  }
+
+  .more {
+    a {
+      color: $text-color;
+      margin: 0 0 0 10px;
+      &:first-child {
+        margin: 0;
+      }
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}

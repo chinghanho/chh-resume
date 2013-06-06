@@ -1,0 +1,73 @@
+#header {
+  color: $text-color;
+
+  .extra {
+    @include animation(fadein .7s .5s backwards);
+  }
+
+  .message {
+    top: 37px;
+    right: 156px;
+    background: hsla(27, 53%, 97%, 1);
+    border: 1px solid hsla(0, 0%, 85%, 1);
+    padding: 10px;
+    color: lighten($text-color, 7%);
+    @include border-radius(8px);
+    @include box-shadow(hsla(0, 0%, 76%, 1) 1px 1px 5px, hsla(0, 0%, 100%, 1) 0 1px inset);
+  }
+  .message:after, .message:before {
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .message:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-left-color: hsla(27, 53%, 97%, 1);
+    border-width: 8px;
+    top: 50%;
+    margin-top: -8px;
+  }
+  .message:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: hsla(0, 0%, 79%, 1);
+    border-width: 9px;
+    top: 50%;
+    margin-top: -9px;
+  }
+
+  // 問：為什麼要有這個 container？
+  // 答：剛發現在 Safari 上，border 跟 border-radius 寫在一
+  //     起，<img> 就會沒辦法變圓角，可能是 Safari 的 bug 吧。
+  .avatar-container {
+    width: 126px;
+    height: 126px;
+    right: 16px;
+    top: 25px;
+    border: 1px solid hsla(0, 0%, 96%, 1);
+    @include transition(all .6s);
+    @include box-shadow(hsla(0, 0%, 66%, .8) 1px 1px 3px 1px);
+    @include border-radius(50%);
+    &:hover {
+      @include transition(all .6s);
+      @include box-shadow(hsla(200, 95%, 64%, 1) 1px 1px 3px 1px);
+    }
+
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin: 3px;
+    @include border-radius(50%);
+  }
+
+  .ani-state {
+    @include transition(all .3s);
+    @include box-shadow(hsla(347, 93%, 70%, .8) 1px 1px 3px 1px);
+  }
+}

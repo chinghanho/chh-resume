@@ -1,0 +1,21 @@
+#hello {
+  @include border-radius(0);
+
+  .content-entry {
+    margin: 0 0 18px 0;
+  }
+
+  .contact {
+    li {
+      display: inline;
+      margin: 0 12px 0 0;
+      i { margin: 0 3px 0 0; }
+    }
+    a {
+      border-bottom: 1px dotted hsla(0, 0%, 68%, 1);
+      &:hover {
+        border-bottom: 1px solid hsla(0, 0%, 68%, 1);
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<% about_me = "我是何清翰，I write code。熱愛 Web 的開放性，喜歡追非主流（新潮流）的技術。專注於學習打造優質的網站、設計友善的網頁介面。相信連結（connection）即是力量，並努力讓 Web 更美好。" %>
+
+<section class="row box" id="hello">
+  <div class="inner">
+    <div class="column4">
+      <h2 class="row-title">Hello</h2>
+    </div>
+
+    <div class="column16 last">
+      <div class="content-entry">
+        <p><%= about_me %></p>
+      </div>
+
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="mailto:chh@chh.tw" target="_blank">
+              <i class="fa-icon-envelope-alt"></i>chh@chh.tw
+            </a>
+          </li>
+
+          <li>
+            <% link_to "http://blog.chh.tw/", :target => "_blank" do %>
+              <i class="fa-icon-globe"></i>blog.chh.tw
+            <% end %>
+          </li>
+
+          <li>
+            <% link_to "https://twitter.com/ChingHanHo", :target => "_blank" do %>
+              <i class="icon-twitter-3"></i>Twitter
+            <% end %>
+          </li>
+
+          <li>
+            <% link_to "https://plus.google.com/114787528537231301324/posts", :target => "_blank" do %>
+              <i class="icon-google__x2B_"></i>Google Plus
+            <% end %>
+          </li>
+
+          <li>
+            <% link_to "https://www.facebook.com/chinghanho.tw", :target => "_blank" do %>
+              <i class="icon-facebook"></i>Facebook
+            <% end %>
+          </li>
+
+          <li>
+            <% link_to "https://github.com/chinghanho", :target => "_blank" do %>
+              <i class="icon-github-01"></i>Github
+            <% end %>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
