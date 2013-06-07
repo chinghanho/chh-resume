@@ -134,3 +134,4 @@ DEPENDENCIES
   middleman (~> 3.0.13)
   middleman-livereload (~> 3.1.0)
   middleman-smusher (~> 3.0.0)
+  rake (~> 10.0.4)
