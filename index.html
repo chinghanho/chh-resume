@@ -7,12 +7,12 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>Ching-Han Ho's Resume</title>
+    <title>About Ching-Han Ho</title>
 
     <!-- google web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
 
-    <link href="stylesheets/screen-ad444de5.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/screen-c11f0b78.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- google analytics -->
     <script type="text/javascript">
@@ -32,26 +32,26 @@
 
   <body class="index">
     <div class="top-bar"></div>
-    <div class="main">
+    <div class="main" itemscope itemtype="http://schema.org/Person">
   <section class="row" id="header">
   <div class="inner">
-    <hgroup>
-      <header id="header-container">
-        <h1>何清翰</h1>
-        <h2>Ching-Han Ho</h2>
+    <header id="container">
+      <h1>
+        <em itemprop="name">何清翰</em>
+        <span itemprop="additionalName">Ching-Han Ho</span>
+      </h1>
 
-        <div class="extra message">
-          使用麻瓜不懂的魔法，<br>
-          試圖撞凹整個宇宙！<br>
-        </div>
+      <div class="extra message">
+        使用麻瓜不懂的魔法，<br>
+        試圖撞凹整個宇宙！<br>
+      </div>
 
-        <div class="extra avatar-container">
-          <a href="#">
-            <img class="avatar" src="/images/chh-avatar-c37dbe23.jpg" alt="CHH avatar">
-          </a>
-        </div>
-      </header>
-    </hgroup>
+      <div class="extra avatar-container">
+        <a href="/images/chh-avatar-c37dbe23.jpg">
+          <img src="/images/chh-avatar-c37dbe23.jpg" alt="CHH avatar" class="avatar" >
+        </a>
+      </div>
+    </header>
   </div>
 </section>
 
@@ -64,19 +64,19 @@
     </div>
 
     <div class="column16 last">
-      <div class="content-entry">
+      <div class="content-entry" itemprop="description">
         <p>我是何清翰，I write code。熱愛 Web 的開放性，喜歡追非主流（新潮流）的技術。專注於學習打造優質的網站、設計友善的網頁介面。相信連結（connection）即是力量，並努力讓 Web 更美好。</p>
       </div>
 
       <div class="contact">
         <ul>
-          <li>
+          <li itemprop="email">
             <a href="mailto:chh@chh.tw" target="_blank">
               <i class="fa-icon-envelope-alt"></i>chh@chh.tw
             </a>
           </li>
 
-          <li>
+          <li itemprop="url">
             <a target="_blank" href="http://blog.chh.tw/">
               <i class="fa-icon-globe"></i>blog.chh.tw
             </a>
@@ -211,7 +211,7 @@ if (document.images) {
         
           <li id="use-sublime-text">
             <a class="column10" target="_blank" href="http://use.sublimetext.tw">
-              <img class="box stuff_img" src="images/use-sublimetext-tw-1-427b883b.png" />
+              <img class="box stuff_img" alt="Use Sublime Text" src="images/use-sublimetext-tw-1-427b883b.png" />
             </a>
 
             <div class="column6 last stuff_info">
@@ -237,7 +237,7 @@ if (document.images) {
         
           <li id="docs-sublime-text">
             <a class="column10" target="_blank" href="http://docs.sublimetext.tw">
-              <img class="box stuff_img" src="images/docs-sublimetext-tw-1-bdf0135e.png" />
+              <img class="box stuff_img" alt="Sublime Text 手冊" src="images/docs-sublimetext-tw-1-bdf0135e.png" />
             </a>
 
             <div class="column6 last stuff_info">
@@ -263,7 +263,7 @@ if (document.images) {
         
           <li id="dropbot-theme">
             <a class="column10" target="_blank" href="http://blog.chh.tw">
-              <img class="box stuff_img" src="images/blog-chh-tw-1-c1d8d619.png" />
+              <img class="box stuff_img" alt="Dropbot Theme" src="images/blog-chh-tw-1-c1d8d619.png" />
             </a>
 
             <div class="column6 last stuff_info">
