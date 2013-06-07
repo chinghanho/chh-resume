@@ -16,6 +16,11 @@ $row-heading-title-font-family: "Hoefler Text", serif;
 .sans  { font-family: $sans; }
 .serif { font-family: $serif; }
 
+.header {
+  display: inline-block;
+  width: 100%;
+}
+
 #{headings()} {
   @extend .heading;
   text-rendering: optimizelegibility;
@@ -26,14 +31,18 @@ body {
   line-height: 1.7em;
   @include content-text-shadow;
 
-  header h1 {
-    font-family: $heading-title-font-family;
-    font-size: 55px;
-    line-height: 1.8em;
-  }
-  header h2 {
-    font-family: $heading-subtitle-font-family;
-    font-size: 38px;
+  header {
+    em {
+      font-family: $heading-title-font-family;
+      font-size: 55px;
+      line-height: 1.8em;
+      @extend .header;
+    }
+    span {
+      font-family: $heading-subtitle-font-family;
+      font-size: 38px;
+      @extend .header;
+    }
   }
 }
 

@@ -7,19 +7,19 @@
     </div>
 
     <div class="column16 last">
-      <div class="content-entry">
+      <div class="content-entry" itemprop="description">
         <p><%= about_me %></p>
       </div>
 
       <div class="contact">
         <ul>
-          <li>
+          <li itemprop="email">
             <a href="mailto:chh@chh.tw" target="_blank">
               <i class="fa-icon-envelope-alt"></i>chh@chh.tw
             </a>
           </li>
 
-          <li>
+          <li itemprop="url">
             <% link_to "http://blog.chh.tw/", :target => "_blank" do %>
               <i class="fa-icon-globe"></i>blog.chh.tw
             <% end %>

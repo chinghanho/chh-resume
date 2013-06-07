@@ -44,7 +44,7 @@ if (document.images) {
         <% stuff.each do |k, v| %>
           <li id="<%= v["id"] %>">
             <% link_to v["url"], :class => "column10", :target => "_blank" do %>
-              <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img" %>
+              <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img", :alt => k %>
             <% end %>
 
             <div class="column6 last stuff_info">
