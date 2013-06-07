@@ -22,6 +22,17 @@
   }
 } %>
 
+<script type="text/javascript">
+if (document.images) {
+    <% stuff.each do |k, v| %>
+      <% v["images"].each do |i| %>
+        img1 = new Image();
+        img1.src = "/images/<%= i %>";
+      <% end %>
+    <% end %>
+}
+</script>
+
 <section class="row" id="stuff">
   <div class="inner">
     <div class="column4">
