@@ -5,9 +5,9 @@ $( document ).ready(function() {
         var target = this.getAttribute("data-target");
         var new_src = this.href;
 
-        $("li" + target + " img")
+        $(".item" + target + " img")
             .fadeOut(80, function() {
-                $("li" + target + " img").attr("src", new_src);
+                $(".item" + target + " img").attr("src", new_src);
             })
             .fadeIn(80);
     });

@@ -58,31 +58,29 @@ if (document.images) {
     </div>
 
     <div class="large-10 columns">
-      <ul>
-        <% stuff.each do |k, v| %>
-          <li class="row" id="<%= v["id"] %>">
-            <% link_to v["url"], :class => "large-7 columns", :target => "_blank" do %>
-              <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img", :alt => k %>
-            <% end %>
+      <% stuff.each do |k, v| %>
+        <div class="row item" id="<%= v["id"] %>">
+          <% link_to v["url"], :class => "large-7 columns", :target => "_blank" do %>
+            <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img", :alt => k %>
+          <% end %>
 
-            <div class="large-5 columns stuff_info">
-              <h3 class="stuff-title"><%= k %></h3>
-              <% link_to v["url"], :class => "go", :target => "_blank" do %>
-                <i class="fa-icon-external-link-sign"></i>
-              <% end %>
-              <div class="description">
-                <div class="participate"><%= v["participate"] %></div>
-                <p><%= v["description"] %></p>
-              </div>
-              <div class="more">
-                <% v["images"].each do |img| %>
-                  <a data-target="#<%= v["id"] %>" href="/images/<%= img %>"><i class="fa-icon-desktop"></i></a>
-                <% end %>
-              </div>
+          <div class="large-5 columns stuff_info">
+            <h3 class="stuff-title"><%= k %></h3>
+            <% link_to v["url"], :class => "go", :target => "_blank" do %>
+              <i class="fa-icon-external-link-sign"></i>
+            <% end %>
+            <div class="description">
+              <div class="participate"><%= v["participate"] %></div>
+              <p><%= v["description"] %></p>
             </div>
-          </li>
-        <% end %>
-      </ul>
+            <div class="more">
+              <% v["images"].each do |img| %>
+                <a data-target="#<%= v["id"] %>" href="/images/<%= img %>"><i class="fa-icon-desktop"></i></a>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </section>
