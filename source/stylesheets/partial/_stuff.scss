@@ -5,10 +5,13 @@ $go-link-color-hover: darken($go-link-color, 16%);
   @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
   border-bottom: 1px solid hsla(0, 0%, 88%, 1);
 
+  li {
+    margin: 0 0 15px 0;
+  }
+
   img {
     @include box-sizing(border-box);
     width: 490px;
-    height: 380px;
     display: inline-block;
     padding: 20px;
     max-width: 100%;
@@ -28,7 +31,6 @@ $go-link-color-hover: darken($go-link-color, 16%);
 
   .stuff_info {
     @include box-sizing(border-box);
-    padding: 0 0 0 15px;
   }
 
   .description {

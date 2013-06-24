@@ -2,6 +2,12 @@ require "zurb-foundation"
 
 activate :livereload
 
+helpers do
+  def available?
+    true
+  end
+end
+
 ###
 # Compass
 ###

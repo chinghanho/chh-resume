@@ -12,20 +12,18 @@ $jquery-color: hsla(220, 56%, 45%, 1);
   [class^="icon-"], [class*=" icon-"] {
     @include transition(all .3s);
     font-size: 112px;
+    margin: 15px 0;
   }
 
   li {
-    float: left;
     text-align: center;
-    padding: 15px 0 0;
-    margin-bottom: $blueprint-grid-margin;
 
-    .icon-html5-02        { color: $html5-color;  }
-    .icon-css3-02         { color: $css3-color;   }
-    .icon-prog-ruby       { color: $ruby-color;   }
-    .icon-vc-git          { color: $git-color;    }
-    .icon-prog-js01       { color: $js-color;     }
-    .icon-prog-jquery     { color: $jquery-color; }
+    .icon-html5-02          { color: $html5-color;  }
+    .icon-css3-02           { color: $css3-color;   }
+    .icon-prog-ruby         { color: $ruby-color;   }
+    .icon-vc-git            { color: $git-color;    }
+    .icon-prog-js01         { color: $js-color;     }
+    .icon-prog-jquery       { color: $jquery-color; }
 
     .icon-html5-02:hover    { color: lighten($html5-color, 8%);  }
     .icon-css3-02:hover     { color: lighten($css3-color, 8%);   }
@@ -36,7 +34,6 @@ $jquery-color: hsla(220, 56%, 45%, 1);
 
     .ref {
       color: $text-color-light;
-      margin: 15px;
       font-size: 12px;
     }
   }

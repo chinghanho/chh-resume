@@ -1,8 +1,10 @@
-<section class="row" id="availability">
-  <div class="inner">
-    <h2 class="row-title hidden">Availability</h2>
-    <div class="content-entry">
+<section class="section" id="availability">
+  <h2 class="leftward hidden">Availability</h2>
+  <div class="content-entry">
+    <% if available? %>
       <p>I AM AVAILABLE<br><em>FOR HIRE</em></p>
-    </div>
+    <% else %>
+      <p>I AM UNAVAILABLE<br><em>FOR HIRE</em></p>
+    <% end %>
   </div>
 </section>
