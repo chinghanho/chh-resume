@@ -1,0 +1,4 @@
+#labs {
+  @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
+  border-bottom: 1px solid hsla(0, 0%, 84%, 1);
+}
