@@ -5,7 +5,43 @@
     </div>
 
     <div class="large-10 columns">
-      Hello?
+      <ul class="large-block-grid-4 small-block-grid-2">
+        <li>
+          <div class="box">
+            <% link_to "http://labs.chh.tw/box-shadow-effect/", :target => "_blank" do %>
+              <p>CSS3 box-shadow 以及 animation 製作的多種酷炫效果。</p>
+              <%= image_tag "/images/box-shadow-effect.png" %>
+            <% end %>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <% link_to "http://labs.chh.tw/broken-light-flash/", :target => "_blank" do %>
+              <p>模擬電燈閃爍的效果，以 JavaScript + CSS 製作。</p>
+              <%= image_tag "/images/broken-light-flash.png" %>
+            <% end %>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <% link_to "http://labs.chh.tw/octocat-generator/", :target => "_blank" do %>
+              <p>點擊註冊按鈕，產生 CSS3 製作的 3D 網頁翻轉特效（需要使用 Firefox）。</p>
+              <%= image_tag "/images/octocat-generator.png" %>
+            <% end %>
+          </div>
+        </li>
+
+        <li>
+          <div class="box">
+            <% link_to "http://labs.chh.tw/canvas-matrix/", :target => "_blank" do %>
+              <p>用 HTML5 Canvas 製作駭客任務經典的「數位瀑布」特效（使用 Webkit 類的瀏覽器效果最佳）。</p>
+              <%= image_tag "/images/canvas-matrix.png" %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

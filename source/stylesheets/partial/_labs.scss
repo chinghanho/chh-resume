@@ -1,4 +1,36 @@
 #labs {
   @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
   border-bottom: 1px solid hsla(0, 0%, 84%, 1);
+
+  a {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    img {
+      @include transition(padding .2s);
+      @include box-sizing(border-box);
+      padding: 14px;
+    }
+    p {
+      @include transition(all .2s);
+      position: absolute;
+      padding: 20px;
+      background: hsla(0, 0%, 92%, .8);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    &:hover {
+      img {
+        @include transition(padding .2s);
+        padding: 0;
+        @include border-radius(3px);
+      }
+      p {
+        @include transition(all .2s);
+        padding: 12px;
+        opacity: 1;
+      }
+    }
+  }
 }
