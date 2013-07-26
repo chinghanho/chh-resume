@@ -4,6 +4,7 @@ $ruby-color: hsla(359, 67%, 48%, 1);
 $git-color: hsla(6, 87%, 62%, 1);
 $js-color: hsla(52, 76%, 63%, 1);
 $jquery-color: hsla(220, 56%, 45%, 1);
+$angularjs-color: hsla(2, 84%, 47%, 1);
 
 #skills {
   @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
@@ -18,19 +19,21 @@ $jquery-color: hsla(220, 56%, 45%, 1);
   li {
     text-align: center;
 
-    .icon-html5-02          { color: $html5-color;  }
-    .icon-css3-02           { color: $css3-color;   }
-    .icon-prog-ruby         { color: $ruby-color;   }
-    .icon-vc-git            { color: $git-color;    }
-    .icon-prog-js01         { color: $js-color;     }
-    .icon-prog-jquery       { color: $jquery-color; }
+    .icon-html5-02          { color: $html5-color;     }
+    .icon-css3-02           { color: $css3-color;      }
+    .icon-prog-ruby         { color: $ruby-color;      }
+    .icon-vc-git            { color: $git-color;       }
+    .icon-prog-js01         { color: $js-color;        }
+    .icon-prog-jquery       { color: $jquery-color;    }
+    .icon-angularjs         { color: $angularjs-color; }
 
-    .icon-html5-02:hover    { color: lighten($html5-color, 8%);  }
-    .icon-css3-02:hover     { color: lighten($css3-color, 8%);   }
-    .icon-prog-ruby:hover   { color: lighten($ruby-color, 8%);   }
-    .icon-vc-git:hover      { color: lighten($git-color, 8%);    }
-    .icon-prog-js01:hover   { color: lighten($js-color, 8%);     }
-    .icon-prog-jquery:hover { color: lighten($jquery-color, 8%); }
+    .icon-html5-02:hover    { color: lighten($html5-color, 8%);     }
+    .icon-css3-02:hover     { color: lighten($css3-color, 8%);      }
+    .icon-prog-ruby:hover   { color: lighten($ruby-color, 8%);      }
+    .icon-vc-git:hover      { color: lighten($git-color, 8%);       }
+    .icon-prog-js01:hover   { color: lighten($js-color, 8%);        }
+    .icon-prog-jquery:hover { color: lighten($jquery-color, 8%);    }
+    .icon-angularjs:hover   { color: lighten($angularjs-color, 8%); }
 
     .ref {
       color: $text-color-light;
