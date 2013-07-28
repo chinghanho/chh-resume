@@ -1,79 +1,33 @@
-<% stuff = {
-  "Twinkle" => {
-    "id" => "twinkle",
-    "url" => "http://twinkle.chh.tw",
-    "images" => ["twinkle-1.png", "twinkle-2.png", "twinkle-3.png", "twinkle-4.png"],
-    "description" => "一個實驗性的部落格系統，目的是建立更友善、更容易架設的環境，讓寫作可以更簡單。No more server, no more database.",
-    "participate" => "html5, scss, compass, ruby, javascript, jquery, angularjs"
-  },
-  "Use Sublime Text" => {
-    "id"          => "use-sublime-text",
-    "url"         => "http://use.sublimetext.tw",
-    "images"      => [ "use-sublimetext-tw-1.png", "use-sublimetext-tw-2.png", "use-sublimetext-tw-3.png" ],
-    "description" => "專門分享 Sublime Text 編輯器使用技巧的網誌，佈景主題模擬 Sublime Text 本身的外觀。",
-    "participate" => "html5, scss, compass"
-  },
-  "Sublime Text 手冊" => {
-    "id"          => "docs-sublime-text",
-    "url"         => "http://docs.sublimetext.tw",
-    "images"      => [ "docs-sublimetext-tw-1.png", "docs-sublimetext-tw-2.png", "docs-sublimetext-tw-3.png" ],
-    "description" => "2013 年最熱門的程式編輯器 Sublime Text 的中文手冊。",
-    "participate" => "html5, scss, compass"
-  },
-  "Dropbot Theme" => {
-    "id"          => "dropbot-theme",
-    "url"         => "http://blog.chh.tw",
-    "images" => [ "blog-chh-tw-1.png", "blog-chh-tw-2.png", "blog-chh-tw-3.png" ],
-    "description" => "一套 Octopress 的佈景主題，更適合中文排版，以及更專注於內容。",
-    "participate" => "html5, scss, compass"
-  }
-}
-
-# 圖片尺寸 470 x 380
-
-%>
-
-<script type="text/javascript">
-if (document.images) {
-    <% stuff.each do |k, v| %>
-      <% v["images"].each do |i| %>
-        img1 = new Image();
-        img1.src = "/images/<%= i %>";
-      <% end %>
-    <% end %>
-}
-</script>
-
-<section class="section" id="stuff">
+<section class="section" id="stuff" ng-controller="stuffCtrl">
   <div class="row">
     <div class="large-2 columns">
       <h2 class="leftward">Stuff I Made</h2>
     </div>
 
     <div class="large-10 columns">
-      <% stuff.each do |k, v| %>
-        <div class="row item" id="<%= v["id"] %>">
-          <% link_to v["url"], :class => "large-7 columns", :target => "_blank" do %>
-            <%= image_tag "/images/#{v["images"][0]}", :class => "box stuff_img", :alt => k %>
-          <% end %>
+      <div class="row item" ng-repeat="stuff in  stuffes" id="{{stuff.id}}">
+        <a href="{{stuff.url}}" class="large-7 columns" target="_blank">
+          <img src="/images/{{stuff.images[0]}}" class="box stuff_img" alt="{{stuff.name}}">
+        </a>
 
-          <div class="large-5 columns stuff_info">
-            <h3 class="stuff-title"><%= k %></h3>
-            <% link_to v["url"], :class => "go", :target => "_blank" do %>
-              <i class="fa-icon-external-link-sign"></i>
-            <% end %>
-            <div class="description">
-              <div class="participate"><%= v["participate"] %></div>
-              <p><%= v["description"] %></p>
-            </div>
-            <div class="more">
-              <% v["images"].each do |img| %>
-                <a data-target="#<%= v["id"] %>" href="/images/<%= img %>"><i class="fa-icon-desktop"></i></a>
-              <% end %>
-            </div>
+        <div class="large-5 column stuff_info">
+          <h3 class="stuff-title">{{stuff.name}}</h3>
+          <a href="{{stuff.url}}" class="go" target="_blank">
+            <i class="fa-icon-external-link-sign"></i>
+          </a>
+
+          <div class="description">
+            <div class="participate">{{stuff.tags}}</div>
+            <p>{{stuff.description}}</p>
+          </div>
+
+          <div class="more">
+            <a ng-repeat="img in stuff.images" data-target="#{{stuff.id}}" href="/images/{{img}}">
+              <i class="fa-icon-desktop"></i>
+            </a>
           </div>
         </div>
-      <% end %>
+      </div>
     </div>
   </div>
 </section>

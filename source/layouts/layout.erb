@@ -12,6 +12,8 @@
     <!-- google web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
     <%= stylesheet_link_tag "screen" %>
 
     <!-- google analytics -->
@@ -40,5 +42,12 @@
 
     <%= javascript_include_tag "all" %>
     <!--[if lt IE 8]><script src="/javascripts/pictonic.min.js"></script><![endif]-->
+
+    <script>
+      $(function() {
+        angular.bootstrap(document, ['chh']);
+      })
+    </script>
+
   </body>
 </html>
