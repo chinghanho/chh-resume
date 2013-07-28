@@ -5,24 +5,24 @@
     </div>
 
     <div class="large-10 columns">
-      <div class="row item" ng-repeat="stuff in  stuffes" id="{{stuff.id}}">
+      <div class="row item" ng-repeat="stuff in stuffes" id="{{stuff.id}}">
         <a href="{{stuff.url}}" class="large-7 columns" target="_blank">
-          <img src="/images/{{stuff.images[0]}}" class="box stuff_img" alt="{{stuff.name}}">
+          <img ng-src="/images/{{stuff.images[0]}}" class="box stuff_img" alt="{{stuff.name}}">
         </a>
 
         <div class="large-5 column stuff_info">
           <h3 class="stuff-title">{{stuff.name}}</h3>
-          <a href="{{stuff.url}}" class="go" target="_blank">
+          <a ng-href="{{stuff.url}}" class="go" target="_blank">
             <i class="fa-icon-external-link-sign"></i>
           </a>
 
           <div class="description">
-            <div class="participate">{{stuff.tags}}</div>
+            <div class="tags tags-formatter" tags="stuff.tags"></div>
             <p>{{stuff.description}}</p>
           </div>
 
           <div class="more">
-            <a ng-repeat="img in stuff.images" data-target="#{{stuff.id}}" href="/images/{{img}}">
+            <a ng-repeat="img in stuff.images" data-target="#{{stuff.id}}" ng-href="/images/{{img}}">
               <i class="fa-icon-desktop"></i>
             </a>
           </div>

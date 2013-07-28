@@ -42,9 +42,22 @@ $go-link-color-hover: darken($go-link-color, 16%);
       margin: 0 0 15px 0;
     }
 
-    .participate {
+    .tags {
       color: $text-color-light;
-      margin: 0 0 20px;
+      margin: 8px 0;
+      li {
+        margin-left: 2px;
+        display: inline-block;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:first-child:before {
+          content: '';
+        }
+        &:before {
+          content: ', ';
+        }
+      }
     }
   }
 
