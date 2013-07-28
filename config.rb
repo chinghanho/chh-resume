@@ -65,10 +65,9 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash
   # activate :gzip
   activate :minify_css
-  activate :minify_javascript
+  activate :minify_javascript, :ignore => [/app.js/, /app-.*\.js/]
   activate :cache_buster
   activate :relative_assets
 
