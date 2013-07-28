@@ -26,7 +26,19 @@ directive('tagsFormatter', function($compile) {
       element.append(newElement);
     }
   }
-})
+}).
+
+directive('targetImage', [function(){
+  return {
+    restrict: 'A',
+    link: function(scope, elem, attrs) {
+      elem.bind('click', function(event) {
+        event.preventDefault();
+        angular.element($(attrs.targetImage).find('img'))[0].src = '/images/' + scope.img;
+      });
+    }
+  };
+}]);
 
 /* Factories */
 angular.module('chh.factories', []).
