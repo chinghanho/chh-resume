@@ -17,12 +17,14 @@
           </a>
 
           <div class="description">
+            <!-- Directives: tags-formatter -->
             <div class="tags tags-formatter" tags="stuff.tags"></div>
             <p>{{stuff.description}}</p>
           </div>
 
           <div class="more">
-            <a ng-repeat="img in stuff.images" target-image="#{{stuff.id}}" ng-href="/images/{{img}}">
+            <!-- Directives: active-image, change-image -->
+            <a ng-repeat="img in stuff.images" change-image="#{{stuff.id}}" ng-href="/images/{{img}}" class="active-image" ng-class="{'active': $first}">
               <i class="fa-icon-desktop"></i>
             </a>
           </div>

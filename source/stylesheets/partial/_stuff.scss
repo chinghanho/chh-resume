@@ -71,6 +71,9 @@ $go-link-color-hover: darken($go-link-color, 16%);
       &:hover {
         color: $link-color;
       }
+      &.active {
+        color: $go-link-color;
+      }
     }
   }
 }

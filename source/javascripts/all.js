@@ -28,14 +28,32 @@ directive('tagsFormatter', function($compile) {
   }
 }).
 
-directive('targetImage', [function(){
+directive('changeImage', [function(){
   return {
     restrict: 'A',
     link: function(scope, elem, attrs) {
       elem.bind('click', function(event) {
         event.preventDefault();
-        angular.element($(attrs.targetImage).find('img'))[0].src = '/images/' + scope.img;
+        $(attrs.changeImage).find('img')[0].src = '/images/' + scope.img;
       });
+    }
+  };
+}]).
+
+directive('activeImage', [function(){
+  return {
+    restrict: 'C',
+    link: function(scope, elem, attrs) {
+      elem.bind('click', function(event) {
+        event.preventDefault();
+        removeActive(elem);
+
+        var findTarget = $(attrs.changeImage).find('img')[0];
+        var getTargetName = findTarget.attributes.src.nodeValue;
+        if (getTargetName == '/images/' + scope.img) {
+          elem[0].className += " active"
+        }
+      })
     }
   };
 }]);
@@ -80,3 +98,11 @@ factory('stuff', function() {
     }
   ]
 })
+
+// private
+
+function removeActive(e) {
+  $(e).siblings().each(function(index, item) {
+    $(item).removeClass('active');
+  })
+}
