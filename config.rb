@@ -72,9 +72,6 @@ configure :build do
   activate :cache_buster
   activate :relative_assets
 
-  require "middleman-smusher"
-  activate :smusher
-
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
