@@ -5,7 +5,10 @@ angular.module('chh', ['chh.controllers', 'chh.directives', 'chh.factories']);
 /* Controllers */
 angular.module('chh.controllers', []).
 
-controller('stuffCtrl', function($scope, stuff) {
+controller('stuffCtrl', function($scope, $http, stuff) {
+  preloadImage(stuff, function(image) {
+    $http({url: '/images/' + image});
+  });
   $scope.filters = {};
   $scope.stuffes = stuff;
 })
@@ -100,6 +103,14 @@ factory('stuff', function() {
 })
 
 // private
+
+function preloadImage(stuff, callback) {
+  stuff.forEach(function(item) {
+    item.images.forEach(function(image) {
+      callback.call(self, image);
+    })
+  })
+}
 
 function removeActive(e) {
   $(e).siblings().each(function(index, item) {
