@@ -5,7 +5,7 @@ angular.module('chh.controllers', []).
 
 controller('stuffCtrl', function($scope, $http, stuff) {
   preloadImage(stuff, function(image) {
-    $http({method: 'GET', url: '/images/' + image});
+    $http({method: 'GET', url: '/images/' + image, Accept: 'image/webp,*/*;q=0.8'});
   });
   $scope.stuffes = stuff;
 })
