@@ -23,7 +23,7 @@ directive('tagsFormatter', function($compile) {
     },
     restrict: 'C',
     link: function(scope, element, attrs) {
-      var template ='<ul><li ng-repeat="tag in tags"><a ng-href="#{{tag}}">{{tag}}</a></li></ul>';
+      var template ='<ul><li ng-repeat="tag in tags">{{tag}}</li></ul>';
       var newElement = angular.element(template);
       $compile(newElement)(scope);
       element.append(newElement);
