@@ -9,7 +9,6 @@ controller('stuffCtrl', function($scope, $http, stuff) {
   preloadImage(stuff, function(image) {
     $http({url: '/images/' + image});
   });
-  $scope.filters = {};
   $scope.stuffes = stuff;
 })
 
