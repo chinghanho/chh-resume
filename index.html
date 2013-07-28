@@ -1,3 +1,21 @@
+<!--
+      ___    __                __     ________  ____  __
+     /   |  / /_  ____  __  __/ /_   / ____/ / / / / / /
+    / /| | / __ \/ __ \/ / / / __/  / /   / /_/ / /_/ /
+   / ___ |/ /_/ / /_/ / /_/ / /_   / /___/ __  / __  /
+  /_/  |_/_.___/\____/\__,_/\__/   \____/_/ /_/_/ /_/
+
+  ========================================================
+                                            about.chh.tw
+
+  This site made with:
+  --------------------------------------------------------
+  Middleman(Ruby)
+  jQuery: 1.9.1
+  AngularJS: 1.0.7
+  Compass
+
+-->
 <!doctype html>
 <html>
   <head>
@@ -5,14 +23,14 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-
-    <!-- Use title if it's in the page YAML frontmatter -->
     <title>About Ching-Han Ho</title>
 
     <!-- google web fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans|Patua+One|Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
 
-    <link href="stylesheets/screen-cfaf1195.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+    <link href="stylesheets/screen-c23822d4.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- google analytics -->
     <script type="text/javascript">
@@ -122,64 +140,64 @@
       <ul class="large-block-grid-4 small-block-grid-2">
         <li>
           <div class="box">
-            <a href="http://www.whatwg.org/html" target="_blank">
+            <div>
               <span class="icon-html5-02"></span>
-              <div class="ref">HTML</div>
-            </a>
+              <div class="ref">HTML5</div>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="http://www.w3.org/Style/CSS/" target="_blank">
+            <div>
               <span class="icon-css3-02"></span>
-              <div class="ref">CSS / SCSS / Compass</div>
-            </a>
+              <div class="ref">CSS3 / SCSS / Compass</div>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="http://www.ruby-lang.org/" target="_blank">
+            <div>
               <span class="icon-prog-ruby"></span>
               <div class="ref">Ruby</div>
-            </a>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="http://git-scm.com/" target="_blank">
+            <div>
               <span class="icon-vc-git"></span>
               <div class="ref">Git</div>
-            </a>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+            <div>
               <span class="icon-prog-js01"></span>
               <div class="ref">JavaScript</div>
-            </a>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="http://jquery.com/" target="_blank">
+            <div>
               <span class="icon-prog-jquery"></span>
               <div class="ref">JQuery</div>
-            </a>
+            </div>
           </div>
         </li>
 
         <li>
           <div class="box">
-            <a href="http://angularjs.org/" target="_blank">
+            <div>
               <span class="icon-angularjs"></span>
               <div class="ref">AngularJS</div>
-            </a>
+            </div>
           </div>
         </li>
       </ul>
@@ -187,175 +205,38 @@
   </div>
 </section>
 
-  
-
-<script type="text/javascript">
-if (document.images) {
-    
-      
-        img1 = new Image();
-        img1.src = "/images/twinkle-1-46485f66.png";
-      
-        img1 = new Image();
-        img1.src = "/images/twinkle-2-78d8c48f.png";
-      
-        img1 = new Image();
-        img1.src = "/images/twinkle-3-5df99cbf.png";
-      
-        img1 = new Image();
-        img1.src = "/images/twinkle-4-19ba1c2f.png";
-      
-    
-      
-        img1 = new Image();
-        img1.src = "/images/use-sublimetext-tw-1-427b883b.png";
-      
-        img1 = new Image();
-        img1.src = "/images/use-sublimetext-tw-2-7baed655.png";
-      
-        img1 = new Image();
-        img1.src = "/images/use-sublimetext-tw-3-edf94479.png";
-      
-    
-      
-        img1 = new Image();
-        img1.src = "/images/docs-sublimetext-tw-1-bdf0135e.png";
-      
-        img1 = new Image();
-        img1.src = "/images/docs-sublimetext-tw-2-5f5ae35a.png";
-      
-        img1 = new Image();
-        img1.src = "/images/docs-sublimetext-tw-3-f49a3d5b.png";
-      
-    
-      
-        img1 = new Image();
-        img1.src = "/images/blog-chh-tw-1-c1d8d619.png";
-      
-        img1 = new Image();
-        img1.src = "/images/blog-chh-tw-2-ebcab190.png";
-      
-        img1 = new Image();
-        img1.src = "/images/blog-chh-tw-3-f1bb3887.png";
-      
-    
-}
-</script>
-
-<section class="section" id="stuff">
+  <section class="section" id="stuff" ng-controller="stuffCtrl">
   <div class="row">
     <div class="large-2 columns">
       <h2 class="leftward">Stuff I Made</h2>
     </div>
 
     <div class="large-10 columns">
-      
-        <div class="row item" id="twinkle">
-          <a class="large-7 columns" target="_blank" href="http://twinkle.chh.tw">
-            <img class="box stuff_img" alt="Twinkle" src="images/twinkle-1-46485f66.png" />
+      <div class="row item" ng-repeat="stuff in stuffes" id="{{stuff.id}}">
+        <a href="{{stuff.url}}" class="large-7 columns" target="_blank">
+          <img ng-src="/images/{{stuff.images[0]}}" class="box stuff_img" alt="{{stuff.name}}">
+        </a>
+
+        <div class="large-5 column stuff_info">
+          <h3 class="stuff-title">{{stuff.name}}</h3>
+          <a ng-href="{{stuff.url}}" class="go" target="_blank">
+            <i class="fa-icon-external-link-sign"></i>
           </a>
 
-          <div class="large-5 columns stuff_info">
-            <h3 class="stuff-title">Twinkle</h3>
-            <a class="go" target="_blank" href="http://twinkle.chh.tw">
-              <i class="fa-icon-external-link-sign"></i>
-            </a>
-            <div class="description">
-              <div class="participate">html5, scss, compass, ruby, javascript, jquery, angularjs</div>
-              <p>一個實驗性的部落格系統，目的是建立更友善、更容易架設的環境，讓寫作可以更簡單。No more server, no more database.</p>
-            </div>
-            <div class="more">
-              
-                <a data-target="#twinkle" href="/images/twinkle-1-46485f66.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#twinkle" href="/images/twinkle-2-78d8c48f.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#twinkle" href="/images/twinkle-3-5df99cbf.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#twinkle" href="/images/twinkle-4-19ba1c2f.png"><i class="fa-icon-desktop"></i></a>
-              
-            </div>
+          <div class="description">
+            <!-- Directives: tags-formatter -->
+            <div class="tags tags-formatter" tags="stuff.tags"></div>
+            <p>{{stuff.description}}</p>
           </div>
-        </div>
-      
-        <div class="row item" id="use-sublime-text">
-          <a class="large-7 columns" target="_blank" href="http://use.sublimetext.tw">
-            <img class="box stuff_img" alt="Use Sublime Text" src="images/use-sublimetext-tw-1-427b883b.png" />
-          </a>
 
-          <div class="large-5 columns stuff_info">
-            <h3 class="stuff-title">Use Sublime Text</h3>
-            <a class="go" target="_blank" href="http://use.sublimetext.tw">
-              <i class="fa-icon-external-link-sign"></i>
+          <div class="more">
+            <!-- Directives: active-image, change-image -->
+            <a ng-repeat="img in stuff.images" change-image="#{{stuff.id}}" ng-href="/images/{{img}}" class="active-image" ng-class="{'active': $first}">
+              <i class="fa-icon-desktop"></i>
             </a>
-            <div class="description">
-              <div class="participate">html5, scss, compass</div>
-              <p>專門分享 Sublime Text 編輯器使用技巧的網誌，佈景主題模擬 Sublime Text 本身的外觀。</p>
-            </div>
-            <div class="more">
-              
-                <a data-target="#use-sublime-text" href="/images/use-sublimetext-tw-1-427b883b.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#use-sublime-text" href="/images/use-sublimetext-tw-2-7baed655.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#use-sublime-text" href="/images/use-sublimetext-tw-3-edf94479.png"><i class="fa-icon-desktop"></i></a>
-              
-            </div>
           </div>
         </div>
-      
-        <div class="row item" id="docs-sublime-text">
-          <a class="large-7 columns" target="_blank" href="http://docs.sublimetext.tw">
-            <img class="box stuff_img" alt="Sublime Text 手冊" src="images/docs-sublimetext-tw-1-bdf0135e.png" />
-          </a>
-
-          <div class="large-5 columns stuff_info">
-            <h3 class="stuff-title">Sublime Text 手冊</h3>
-            <a class="go" target="_blank" href="http://docs.sublimetext.tw">
-              <i class="fa-icon-external-link-sign"></i>
-            </a>
-            <div class="description">
-              <div class="participate">html5, scss, compass</div>
-              <p>2013 年最熱門的程式編輯器 Sublime Text 的中文手冊。</p>
-            </div>
-            <div class="more">
-              
-                <a data-target="#docs-sublime-text" href="/images/docs-sublimetext-tw-1-bdf0135e.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#docs-sublime-text" href="/images/docs-sublimetext-tw-2-5f5ae35a.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#docs-sublime-text" href="/images/docs-sublimetext-tw-3-f49a3d5b.png"><i class="fa-icon-desktop"></i></a>
-              
-            </div>
-          </div>
-        </div>
-      
-        <div class="row item" id="dropbot-theme">
-          <a class="large-7 columns" target="_blank" href="http://blog.chh.tw">
-            <img class="box stuff_img" alt="Dropbot Theme" src="images/blog-chh-tw-1-c1d8d619.png" />
-          </a>
-
-          <div class="large-5 columns stuff_info">
-            <h3 class="stuff-title">Dropbot Theme</h3>
-            <a class="go" target="_blank" href="http://blog.chh.tw">
-              <i class="fa-icon-external-link-sign"></i>
-            </a>
-            <div class="description">
-              <div class="participate">html5, scss, compass</div>
-              <p>一套 Octopress 的佈景主題，更適合中文排版，以及更專注於內容。</p>
-            </div>
-            <div class="more">
-              
-                <a data-target="#dropbot-theme" href="/images/blog-chh-tw-1-c1d8d619.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#dropbot-theme" href="/images/blog-chh-tw-2-ebcab190.png"><i class="fa-icon-desktop"></i></a>
-              
-                <a data-target="#dropbot-theme" href="/images/blog-chh-tw-3-f1bb3887.png"><i class="fa-icon-desktop"></i></a>
-              
-            </div>
-          </div>
-        </div>
-      
+      </div>
     </div>
   </div>
 </section>
@@ -424,7 +305,15 @@ if (document.images) {
       <div id="back_to_top"><i class="fa-icon-chevron-up"></i></div>
     </div>
 
-    <script src="javascripts/all-1143eb0d.js" type="text/javascript"></script>
+    <script src="javascripts/all-ac51f172.js" type="text/javascript"></script>
+    <script src="javascripts/lib/app-9f01adcc.js" type="text/javascript"></script>
     <!--[if lt IE 8]><script src="/javascripts/pictonic.min-54231652.js"></script><![endif]-->
+
+    <script>
+      $(function() {
+        angular.bootstrap(document, ['chh']);
+      })
+    </script>
+
   </body>
 </html>
