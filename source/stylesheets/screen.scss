@@ -9,13 +9,10 @@
 @import "compass/css3/text-shadow";
 @import "animation"; // compass-animation: http://git.io/146Q5g
 
-/*-----------------------*\
-          $reset
-\*-----------------------*/
-/**
- */
-@include global-reset;
-@include reset-html5;
-
+@import "theme";
 @import "base";
+@import "utilities";
+@import "modulars";
+@import "layout";
+@import "typography";
 @import "partial";

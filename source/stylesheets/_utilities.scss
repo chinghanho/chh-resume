@@ -14,7 +14,3 @@
     @include transform3d(0 0 0);
   }
 }
-
-body {
-  -webkit-backface-visibility: hidden;
-}

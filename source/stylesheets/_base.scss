@@ -1,4 +1,9 @@
-@import "base/utilities";
-@import "base/layout";
-@import "base/theme";
-@import "base/typography";
+/*------------------------------*\
+              $RESET
+\*------------------------------*/
+@include global-reset;
+@include reset-html5;
+
+body {
+  -webkit-backface-visibility: hidden;
+}
