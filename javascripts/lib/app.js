@@ -5,7 +5,10 @@ angular.module('chh.controllers', []).
 
 controller('stuffCtrl', function($scope, $http, stuff) {
   preloadImage(stuff, function(image) {
-    $http({method: 'GET', url: '/images/' + image, headers: {'Accept': 'image/webp,*/*;q=0.8'}, cache: true});
+    $http({
+      method: 'GET',
+      url: '/images/' + image,
+      headers: {'Accept': 'image/webp,*/*;q=0.8'}, cache: true});
   });
   $scope.stuffes = stuff;
 })
@@ -64,6 +67,14 @@ angular.module('chh.factories', []).
 factory('stuff', function() {
   return [
     // 圖片尺寸 470 x 380
+    {
+      name: 'WebTools',
+      id: 'webtools',
+      url: 'http://webtools.chh.tw',
+      images: ['webtools-1.png', 'webtools-2.png', 'webtools-3.png'],
+      description: '蒐集各種有關 Web 設計、開發與專案管理的工具與資源的網站。',
+      tags: ['html5', 'compass', 'nodejs', 'javascript', 'angularjs', 'mongodb']
+    },
     {
       name: 'Twinkle',
       id: 'twinkle',
