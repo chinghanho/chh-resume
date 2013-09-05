@@ -6,6 +6,7 @@ $js-color: hsla(52, 76%, 63%, 1);
 $jquery-color: hsla(220, 56%, 45%, 1);
 $angularjs-color: hsla(2, 84%, 47%, 1);
 $node-js-color: hsla(89, 53%, 54%, 1);
+$mongodb-color: hsla(113, 47%, 38%, 1);
 
 #skills {
   @include box-shadow(hsla(0, 0%, 100%, 1) 0 1px);
@@ -27,7 +28,9 @@ $node-js-color: hsla(89, 53%, 54%, 1);
     .icon-prog-js01           { color: $js-color;        }
     .icon-prog-jquery         { color: $jquery-color;    }
     .icon-angularjs           { color: $angularjs-color; }
-    .icon-prog-nodejs02       { color: $node-js-color; }
+    .icon-prog-nodejs02       { color: $node-js-color;   }
+    .icon-dbs-mongodb         { color: $mongodb-color;   }
+
 
     .icon-html5-02:hover      { color: lighten($html5-color, 8%);     }
     .icon-css3-02:hover       { color: lighten($css3-color, 8%);      }
@@ -37,6 +40,7 @@ $node-js-color: hsla(89, 53%, 54%, 1);
     .icon-prog-jquery:hover   { color: lighten($jquery-color, 8%);    }
     .icon-angularjs:hover     { color: lighten($angularjs-color, 8%); }
     .icon-prog-nodejs02:hover { color: lighten($node-js-color, 8%);   }
+    .icon-dbs-mongodb:hover   { color: lighten($mongodb-color, 8%);   }
 
     .ref {
       color: $text-color-light;
