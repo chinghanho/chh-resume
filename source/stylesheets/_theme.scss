@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  background: $page-bg image-url("paper_fibers/paper_fibers.png") top left;
+  background: $page-bg image-url("paper_fibers/paper_fibers.png") top left !important;
   color: $text-color;
 
   .top-bar {
